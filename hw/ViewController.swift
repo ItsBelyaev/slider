@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         
         updatingRedColor()
         updatingBlueColor()
@@ -49,21 +49,21 @@ class ViewController: UIViewController {
     
     func updatingRedColor() {
         redCountLabel.text = String(format: "%.2f", redSlider.value)
-        redLabel.textColor = UIColor(red: CGFloat(redSlider.value), green: 0, blue: 0, alpha: 1)
+        redSlider.minimumTrackTintColor = UIColor(red: CGFloat(redSlider.value), green: 0, blue: 0, alpha: 1)
         
         updatingViewColor()
     }
     
     func updatingGreenColor() {
         greenCountLabel.text = String(format: "%.2f", greenSlider.value)
-        greenLabel.textColor = UIColor(red: 0, green: CGFloat(greenSlider.value), blue: 0, alpha: 1)
+        greenSlider.minimumTrackTintColor = UIColor(red: 0, green: CGFloat(greenSlider.value), blue: 0, alpha: 1)
         
         updatingViewColor()
     }
     
     func updatingBlueColor() {
         blueCountLabel.text = String(format: "%.2f", blueSlider.value)
-        blueLabel.textColor = UIColor(red: 0, green: 0, blue: CGFloat(blueSlider.value), alpha: 1)
+        blueSlider.minimumTrackTintColor = UIColor(red: 0, green: 0, blue: CGFloat(blueSlider.value), alpha: 1)
         
         updatingViewColor()
     }
